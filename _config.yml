@@ -1,0 +1,58 @@
+# Site
+name: "Heikki's Blog"
+title: "Heikki's Blog"
+description: "Blog about Programming, Life, The Universe, and Everything."
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: /
+google_analytics: 'UA-153207560-1'
+disqus: 'heikki-blog'
+include: ["_pages"]
+permalink: /:title/
+
+# Authors
+authors:
+  heikki:
+    name: Heikki
+    display_name: Heikki    
+    avatar: 'assets/images/avatar.png'
+    gravatar: b1cc14991db7a456fcd761680bbc8f81
+    email: heikki.leskinen@gmail.com
+    web: https://about.pandawalr.us
+    twitter: https://twitter.com/heikki4real
+    description: "Does exactly what it says on the tin."
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [README.md, Gemfile, Gemfile.lock, docker-compose.yml]
